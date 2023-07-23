@@ -125,9 +125,14 @@ let foodArr = {
 
 //CODE HERE
 
-const filteredFood = foodArr.filter(function(item){
-    return item
-})
+for(let i = 0; i < foodArr.length; i ++){
+    if(foodArr[i].includes('e')){
+        console.log('All have letter E')
+    } else{
+        console.log('GET OUTTA HERE')
+    }
+}
+
 
 
 
@@ -174,7 +179,9 @@ const filteredFood = foodArr.filter(function(item){
 */
 
 //CODE HERE
-
+let filterByProperty = foodArr.filter((element) => element.price)
+console.log(filterByProperty, "above")
+    
 
 /*
     Invoke the `filterByProperty` function passing

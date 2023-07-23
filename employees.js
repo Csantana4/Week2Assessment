@@ -97,7 +97,7 @@ class Manager extends Employee{
         this.employee = employee;
     }
 }
-let getEmployees = new Manager(('name', 'shift', 'employee'))
+let getEmployees = new Manager('name', 'shift', 'employee')
   
 
 
@@ -115,7 +115,7 @@ let getEmployees = new Manager(('name', 'shift', 'employee'))
 */
 
 //CODE HERE
-let manager = new  Manager(('Cece and Schmidt','weekday mornings, weekday afternoons', 'Winston'))
+let manager = new  Manager('Winston','weekday mornings, weekday afternoons','Cece and Schmidt')
 
 /*
     Call the `getEmployees` method on the
@@ -123,7 +123,7 @@ let manager = new  Manager(('Cece and Schmidt','weekday mornings, weekday aftern
 */
 
 //CODE HERE
-console.log(manager, shift, employee.name)
+console.log(manager)
 /*
     Call the `addEmployee` method on the 
     `manager` object passing in the string 
@@ -132,6 +132,12 @@ console.log(manager, shift, employee.name)
 
 //CODE HERE 
 
+add.Employee(() => {
+    this.employee += 1
+    console.log('employee added')
+})
+
+
 /*
     Call the `getEmployees` method on the
     `manager` object again to confirm 
@@ -139,3 +145,5 @@ console.log(manager, shift, employee.name)
 */
 
 //CODE HERE
+
+console.log(manager.getEmployees)

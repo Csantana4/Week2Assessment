@@ -22,10 +22,10 @@
 */
 
 //CODE HERE
-let greetUser =(username) => {
-    console.log('Welcome back', + username)
-}
- greeting("Christian" , greetUser)
+// function greetUser => (username) => {
+//     callback(`Welcome back, ${username}`)
+// }
+//  greeting("Christian" , greetUser)
 
 
 
@@ -52,9 +52,17 @@ let greetUser =(username) => {
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
-
-
-
+function canWeDeliver(x){
+    let answers =[]
+    for(let i = 0; i < x.length; i++){
+        if(x[i] = true ){
+            answers.push ("You're in the delivery zone!")
+        }else{
+            answers.push ("Sorry, we can't deliver to that address")
+        }
+    } return answers
+} let arrayEvaluator = canWeDeliver(deliveryAreaZipCodes)
+console.log(arrayEvaluator)
 /* 
     Problem 2 Continued
 
@@ -73,7 +81,8 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 */
 
 // CODE HERE
-
+let canWeDeliverTwo = arrayEvaluator.filter((item) => item.includes)
+console.log(canWeDeliverTwo)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -109,6 +118,9 @@ const deals = [
 */
 
 //CODE HERE
+let firstDeal = deals.replace('15','10')
+
+
 
 
 
@@ -126,3 +138,7 @@ const deals = [
 */
 
 //CODE HERE
+ let secondDeal = firstDeal.replace('March!', 'April!')
+ console.log(secondDeal)
+
+ let trimSecondDeal = secondDeal.trim()

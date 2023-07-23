@@ -54,7 +54,10 @@ console.log(summedPrice)
 */
 
 //CODE HERE
-let calcFinalPrice = function(item, price, tax, coupon){
+let calcFinalPrice = function(item, price, couponValue, tax){
+    for(i = 0; i < price.length; i++){
+        
+    }
 
 }
 
@@ -81,7 +84,10 @@ let calcFinalPrice = function(item, price, tax, coupon){
 
 /*
     TEXT ANSWER HERE
-
+// reviews - I would want to know what they thought of the service
+//what advertisement- how they found out about the restaurant
+//Returning customer-  are they  returning customer
+//Favorite dish- to see if what does well in the restaurant
 */
 
 /*
@@ -90,3 +96,11 @@ let calcFinalPrice = function(item, price, tax, coupon){
 */
 
 //CODE HERE
+
+let customer ={
+    Review: 'I would want to know what they thought of the service',
+    advertisement: 'How they found out about the restaurant',
+    returnCust: 'Are they  returning customer',
+    favDish: 'To see if what does well in the restaurant',
+
+}
