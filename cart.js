@@ -54,12 +54,12 @@ console.log(summedPrice)
 */
 
 //CODE HERE
-let calcFinalPrice = function(item, price, couponValue, tax){
-    for(i = 0; i < price.length; i++){
-        
-    }
-
+function calcFinalPrice(cartTotal,couponValue,tax){
+    return (cartTotal * tax) - couponValue
 }
+console.log(calcFinalPrice(26.97, 3, 1.06))
+  
+
 
 
 //////////////////PROBLEM 3////////////////////
@@ -84,10 +84,11 @@ let calcFinalPrice = function(item, price, couponValue, tax){
 
 /*
     TEXT ANSWER HERE
-// reviews - I would want to know what they thought of the service
-//what advertisement- how they found out about the restaurant
-//Returning customer-  are they  returning customer
-//Favorite dish- to see if what does well in the restaurant
+//Name
+//Address
+//Phone Number
+//PaymentType
+
 */
 
 /*
@@ -98,9 +99,9 @@ let calcFinalPrice = function(item, price, couponValue, tax){
 //CODE HERE
 
 let customer ={
-    Review: 'I would want to know what they thought of the service',
-    advertisement: 'How they found out about the restaurant',
-    returnCust: 'Are they  returning customer',
-    favDish: 'To see if what does well in the restaurant',
+    name: 'John Doe',
+    address: '123 fake st Orem Utah',
+    phoneNumber: '8015553396',
+    payType: 'Cash',
 
 }
