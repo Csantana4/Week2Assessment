@@ -26,9 +26,11 @@ class Employee {
        this.name = name;
        this.shift = shift;
     }
+        getSchedule(){
+        console.log(`${this.name} works on ${this.shift}`)
+    }
 }
-let getSchedule = new Employee('name','shift')
-console.log(getSchedule.name,'works on', getSchedule.shift )
+
 /*
     Create a new instance of your class.
     Save it to a variable called `empOne`.
@@ -63,8 +65,11 @@ console.log(emp1)
 */
 
 //CODE HERE
-let emp2 = new Employee('Nick','weekday mornings, weekday afternoons')
-console.log (emp1, emp2)
+let emp2 = {...emp1}
+emp2.name = ('Nick')
+console.log(emp1)
+console.log(emp2)
+
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -90,17 +95,24 @@ console.log (emp1, emp2)
 */
 
 //CODE HERE
+
+
 class Manager extends Employee{
     constructor(name, shift, employee){
         super(name, shift)
 
         this.employee = employee;
     }
+    getEmployees (){
+        console.log(`${this.name}, 'manages', ${this.employee}`)
+    }
+    addEmployee(emp){
+        return this.employee.push(emp)
+    }
 }
-let getEmployees = new Manager('name', 'shift', 'employee')
+
+
   
-
-
 
 
 /*
@@ -115,7 +127,7 @@ let getEmployees = new Manager('name', 'shift', 'employee')
 */
 
 //CODE HERE
-let manager = new  Manager('Winston','weekday mornings, weekday afternoons','Cece and Schmidt')
+let manager = new Manager('Winston','weekday mornings, weekday afternoons',['Cece', 'Schmidt'])
 
 /*
     Call the `getEmployees` method on the
@@ -123,7 +135,8 @@ let manager = new  Manager('Winston','weekday mornings, weekday afternoons','Cec
 */
 
 //CODE HERE
-console.log(manager)
+manager.getEmployees()
+
 /*
     Call the `addEmployee` method on the 
     `manager` object passing in the string 
@@ -132,10 +145,7 @@ console.log(manager)
 
 //CODE HERE 
 
-add.Employee(() => {
-    this.employee += 1
-    console.log('employee added')
-})
+manager.addEmployee('Coach')
 
 
 /*
@@ -146,4 +156,4 @@ add.Employee(() => {
 
 //CODE HERE
 
-console.log(manager.getEmployees)
+manager.getEmployees()
