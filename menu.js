@@ -37,7 +37,7 @@ let pizza = {
     category: 'entree',
     popularity: 5,
     rating: 9,
-    tag: 'gluten-free',
+    tag: ['gluten-free', 'cheap']
 }
 
 
@@ -53,7 +53,7 @@ let pizza = {
 */
 
 //CODE HERE
-console.log(pizza.popularity)
+// console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
@@ -63,7 +63,7 @@ console.log(pizza.popularity)
 */
 
 //CODE HERE
-console.log(pizza['tag'])
+// console.log(pizza.tag[1])
 
 /*
     Third, destructure the price off of the
@@ -73,8 +73,8 @@ console.log(pizza['tag'])
 */
 
 //CODE HERE
-let {price} = pizza
-console.log(price)
+// let {price} = pizza
+// console.log(price)
 
 /*
     Fourth, and last, destructure the category
@@ -84,8 +84,8 @@ console.log(price)
 */
 
 //CODE HERE
-let {category} = pizza
-console.log(category)
+// let {category} = pizza
+// console.log(category)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -100,15 +100,49 @@ console.log(category)
 */
 
 //CODE HERE
-let foodArr = {
-    name: 'steak',
+let foodArr = [ 
+    {
+    name: 'Steak',
     type: 'New York',
     price: 20.99,
     restaurant: 'Texas',
     rate: 9,
-
-
-}
+    tag: ['1/2 off']
+    },
+    {
+    name: 'Chicken',
+    type: 'breast',
+    price: 15.99,
+    restaurant: 'Popeyes',
+    rate: 7,
+    tag: ['Kids eat free']
+    },
+    {
+    name: 'Ribs',
+    type: 'Beef',
+    price: 23.99,
+    restaurant: 'R&R',
+    rate: 10,
+    tag: ['fall off the bone']
+    },
+    {
+    name: 'Wings',
+    type: 'Buffalo',
+    price:16.99,
+    restaurant: 'Bdubs',
+    rate: 9,
+    tag: ['1/2 off']
+    },
+    {
+    name: 'Lobster',
+    type: 'Tail',
+    price: 30.99,
+    restaurant: 'Cajun',
+    rate: 9,
+    tag: ['1/2 off']
+    }
+    
+]
 
 
 //////////////////PROBLEM 4////////////////////
@@ -125,17 +159,9 @@ let foodArr = {
 
 //CODE HERE
 
-for(let i = 0; i < foodArr.length; i ++){
-    if(foodArr[i].includes('e')){
-        console.log('All have letter E')
-    } else{
-        console.log('GET OUTTA HERE')
-    }
-}
+let filterTag = foodArr.filter((element) => element.tag.includes('1/2 off'))
 
-
-
-
+console.log(filterTag)
 
 
 
@@ -179,8 +205,8 @@ for(let i = 0; i < foodArr.length; i ++){
 */
 
 //CODE HERE
-let filterByProperty = foodArr.filter((element) => element.price)
-console.log(filterByProperty, "above")
+// let filterByProperty = foodArr.filter((element) => element.price)
+// console.log(filterByProperty, "above")
     
 
 /*
