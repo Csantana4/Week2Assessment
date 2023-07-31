@@ -1,0 +1,14 @@
+//Solid attempt, a lot of the issues I found were caused by not following exactly what the directions ask for. I detailed exactly what I noticed in each problem that caused a point to be taken away. Let me know when you correct this so I can regrade it!
+
+cart.js problem 2: Since we aren't working with an array, a for loop is not necessary to solve this problem.
+cart.js problem 3: To make the example object, the directions want you to actually put in dummy data to match your text answer not just copy them. Also, you need to state what data types you want each property to be.
+employees.js problem 1: getSchedule needs to be in the Class and you need to use the spread operator when making empTwo.
+employees.js problem 2: The employee property in the Manager class needs to be an array.
+home.js problem 1: A callback is not necessary to solve this problem, you just need to return the requested string using the parameter.
+home.js problem 2: For part 1, it's not supposed to return a whole array. The directions just want a string returned based on if the zipcode argument exists in the deliveryAreaZipCodes array. For part 2, using the includes method works better than filter to solve this problem since you have to return specific strings based on a true or false value.
+home.js problem 3: You are trying to use the replace string method on an array, which gives an error. You need to use dot and bracket notation to access the place where the strings are being contained.
+menu.js problem 2: Second tag in tags array is not being accessed.
+menu.js problem 3: foodArr is supposed to be an array that holds multiple objects, you have it as just an object.
+menu.js problem 4: The directions require you to use the filter method to solve this problem.
+menu.js problem 5: Not finished.
+orders.js: updateStatus needs to be inside the Ticket class.

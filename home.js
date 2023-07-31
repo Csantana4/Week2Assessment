@@ -22,10 +22,10 @@
 */
 
 //CODE HERE
-// function greetUser => (username) => {
-//     callback(`Welcome back, ${username}`)
-// }
-//  greeting("Christian" , greetUser)
+function greetUser => (username) => {
+    callback(`Welcome back, ${username}`)
+}
+ greeting("Christian" , greetUser)
 
 
 
@@ -52,17 +52,15 @@
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
-function canWeDeliver(x){
-    let answers =[]
-    for(let i = 0; i < x.length; i++){
-        if(x[i] = true ){
-            answers.push ("You're in the delivery zone!")
-        }else{
-            answers.push ("Sorry, we can't deliver to that address")
+function canWeDeliver(zipCode){
+    for(let i = 0; i < deliveryAreaZipCodes.length; i++){
+        if(deliveryAreaZipCodes[i] === zipCode ){
+            return ("You're in the delivery zone!")
         }
-    } return answers
-} let arrayEvaluator = canWeDeliver(deliveryAreaZipCodes)
-console.log(arrayEvaluator)
+    } 
+    return("Sorry, we can't deliver to that address")
+} 
+// console.log(canWeDeliver())
 /* 
     Problem 2 Continued
 
@@ -81,8 +79,14 @@ console.log(arrayEvaluator)
 */
 
 // CODE HERE
-let canWeDeliverTwo = arrayEvaluator.filter((item) => item.includes)
-console.log(canWeDeliverTwo)
+function canWeDeliverTwo(zipCode){
+    if(deliveryAreaZipCodes.includes(zipCode)){
+        return ("You're in the delivery zone!")
+    }else
+        return "Sorry, we can't deliver to that address"
+    
+}
+console.log(canWeDeliverTwo(85204))
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -118,7 +122,8 @@ const deals = [
 */
 
 //CODE HERE
-let firstDeal = deals.replace('15','10')
+deals[0].title = deals[0].title.replace('15','10')
+console.log(deals)
 
 
 
@@ -138,7 +143,5 @@ let firstDeal = deals.replace('15','10')
 */
 
 //CODE HERE
- let secondDeal = firstDeal.replace('March!', 'April!')
- console.log(secondDeal)
-
- let trimSecondDeal = secondDeal.trim()
+deals[1].desc = deals[1].desc.replace('March','April').trim()
+console.log(deals)
